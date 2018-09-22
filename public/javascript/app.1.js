@@ -164,16 +164,9 @@ var game = {
     }
 }
 
-$("#test").on("click",() => {
+// $("#test").on("click",() => {
   
-
-    // var client = new twitter({
-    //     consumer_key: 'jvoKd1Z25wNcIVc271qxvq0jO',
-    //     consumer_secret: 'D3T47iitJcKnOHEDE1RRUH19ITpfzZoBylLIUPdc9rp4JgWUlQ',
-    //     access_token_key: '1028469933087309824-AuscBssBT38TbT0bAt9z5gj34fjLVG',
-    //     access_token_secret: 'vptY8ihZVMNsB20itVn9AZd1QrSyGr4HrNHepcyO3gZu1',
-    //       });
-    
+    function getTweet(celebrity) {
     var client = new Twitter({
         consumer_key: process.env.TWITTER_CONSUMER_KEY,
         consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
@@ -181,7 +174,7 @@ $("#test").on("click",() => {
         access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
     });
 
-    var params = {screen_name: "JCrossover", count: 10};
+    var params = {screen_name: celebrity, count: 10};
         client.get('statuses/user_timeline', params, function(error, tweets, response) {
             if (!error) {
                 for (var i in tweets) {   
@@ -200,4 +193,11 @@ $("#test").on("click",() => {
 
 
 
-})
+    }
+
+    getTweet()
+
+    //pull database, push celebs into array 
+    //run for loop that will that will run get tweet function 
+
+    //firebase for scoring
