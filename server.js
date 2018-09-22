@@ -1,5 +1,8 @@
+require("dotenv").config();
+
 var express = require("express");
 var bodyParser = require("body-parser");
+var twitter = require('twitter');
 
 var app = express();
 var PORT = process.env.PORT || 8080;

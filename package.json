@@ -30,6 +30,7 @@
     "fs": "0.0.1-security",
     "mysql2": "^1.6.1",
     "path": "^0.12.7",
-    "sequelize": "^4.38.1"
+    "sequelize": "^4.38.1",
+    "twitter": "^1.7.1"
   }
 }
