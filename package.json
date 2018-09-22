@@ -1,0 +1,35 @@
+{
+  "name": "project2.1",
+  "version": "1.0.0",
+  "description": "Know Your Feed",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chum46/Project2.1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chum46/Project2.1/issues"
+  },
+  "homepage": "https://github.com/chum46/Project2.1#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.2.0",
+    "d3": "^5.7.0",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
+    "mysql2": "^1.6.1",
+    "path": "^0.12.7",
+    "sequelize": "^4.38.1"
+  }
+}
