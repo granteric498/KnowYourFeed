@@ -163,3 +163,41 @@ var game = {
         // $('#subcontainer').append("<button class='button1' id='reset'>RESTART</button>");
     }
 }
+
+$("#test").on("click",() => {
+  
+
+    // var client = new twitter({
+    //     consumer_key: 'jvoKd1Z25wNcIVc271qxvq0jO',
+    //     consumer_secret: 'D3T47iitJcKnOHEDE1RRUH19ITpfzZoBylLIUPdc9rp4JgWUlQ',
+    //     access_token_key: '1028469933087309824-AuscBssBT38TbT0bAt9z5gj34fjLVG',
+    //     access_token_secret: 'vptY8ihZVMNsB20itVn9AZd1QrSyGr4HrNHepcyO3gZu1',
+    //       });
+    
+    var client = new Twitter({
+        consumer_key: process.env.TWITTER_CONSUMER_KEY,
+        consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+        access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+        access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
+    });
+
+    var params = {screen_name: "JCrossover", count: 10};
+        client.get('statuses/user_timeline', params, function(error, tweets, response) {
+            if (!error) {
+                for (var i in tweets) {   
+                    // console.log(tweets[i].text);
+                    if (tweets[i].favorite_count > 1000 && tweets[i].text.length > 100 && tweets[i].user.verified === true) {
+                        // console.log("True");
+                        console.log(tweets[i].text);
+                    } else {
+                        console.log(`Favorites/tweets/verified issue`)
+                    }
+                    // console.log(tweets[i].favorite_count);
+                };
+            }
+        });
+      
+
+
+
+})
