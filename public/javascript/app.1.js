@@ -3,49 +3,49 @@ var tweetArr = [{
     twID: 1,
     twTopic: "random",
     twText: "I'd walk through a fire for my daughter...",
-    twImage: "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    twImage: "https://avatars.io/twitter/VancityReynolds/medium",
     authorID: "Ryan Reynolds"
 }, {
     twID: 2,
     twTopic: "random",
     twText: "Why is rhode island nor a road...",
-    twImage: "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    twImage: "https://avatars.io/twitter/justinbieber/medium",
     authorID: "Justin Bieber"
 }, {
     twID: 3,
     twTopic: "random",
     twText: "My head is too heavy",
-    twImage: "http://pbs.twimg.com/profile_images/879071738625232901/u0nlrr4Y_normal.jpg",
+    twImage: "https://avatars.io/twitter/mindykaling/medium",
     authorID: "Mindy Kaling"
 }, {
     twID: 4,
     twTopic: "random",
     twText: "BILL COSBY INNOCENT",
-    twImage: "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    twImage: "https://avatars.io/twitter/kanyewest/medium",
     authorID: "Kanye West"
 }, {
     twID: 5,
     twTopic: "random",
     twText: "random tweet comment comment comment",
-    twImage: "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    twImage: "https://avatars.io/twitter/donaldtrump/medium",
     authorID: "Dhruv"
 }, {
     twID: 6,
     twTopic: "random",
     twText: "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-    twImage: "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    twImage: "https://avatars.io/twitter/JCrossover/medium",
     authorID: "Chum"
 }, {
     twID: 7,
     twTopic: "random",
     twText: "BEE",
-    twImage: "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    twImage: "https://avatars.io/twitter/kobebryant/medium",
     authorID: "Grant"
 }, {
     twID: 8,
     twTopic: "random",
     twText: "C",
-    twImage: "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+    twImage: "https://avatars.io/twitter/steviesovak/medium",
     authorID: "Steven"
 }];
 
