@@ -52,27 +52,27 @@ var tweetArr = [{
 
 // MAIN PROCESS CLICK EVENTS //
 
-// $('#start').on('click', function () {
-//     // Removes the start button and instructions and loads the game
-//     $('#start').remove();
-//     $('#instruction').remove();
-//     game.loadQ();
-// })
+$('#start').on('click', function () {
+    // Removes the start button and instructions and loads the game
+    $('#start').remove();
+    $('#instruction').remove();
+    game.loadQ();
+})
 
-// $(document).on('click', '.button1', function (e) {
-//     // Passes the answer that the user clicks on to function
-//     game.clicked(e);
-// })
+$(document).on('click', '.button1', function (e) {
+    // Passes the answer that the user clicks on to function
+    game.clicked(e);
+})
 
-// $(document).on('click', '#reset', function () {
-//     // Resets the game without reloading the page
-//     $('#subcontainer').html("<h5 id='counter'> </h5>");
-//     game.qIndex = 0;
-//     game.correct = 0;
-//     game.incorrect = 0;
-//     game.counter = 15;
-//     game.loadQ();
-// })
+$(document).on('click', '#reset', function () {
+    // Resets the game without reloading the page
+    $('#subcontainer').html("<h5 id='counter'> </h5>");
+    game.qIndex = 0;
+    game.correct = 0;
+    game.incorrect = 0;
+    game.counter = 15;
+    game.loadQ();
+})
 
 // OBJECT CONTAINING THE GAME FUNCTIONS //
 var game = {
