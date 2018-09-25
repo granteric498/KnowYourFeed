@@ -26,7 +26,7 @@ app.use(express.static("public"));
 require("./routes/html")(app);
 require("./routes/author-api")(app);
 // require("./routes/post-api")(app);
-require("./public/javascript/app.1.js")(app);
+// require("./public/javascript/app.1.js")(app);
 
 // db.sequelize.sync({
 //   force: true

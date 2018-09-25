@@ -52,27 +52,27 @@ var tweetArr = [{
 
 // MAIN PROCESS CLICK EVENTS //
 
-$('#start').on('click', function () {
-    // Removes the start button and instructions and loads the game
-    $('#start').remove();
-    $('#instruction').remove();
-    game.loadQ();
-})
+// $('#start').on('click', function () {
+//     // Removes the start button and instructions and loads the game
+//     $('#start').remove();
+//     $('#instruction').remove();
+//     game.loadQ();
+// })
 
-$(document).on('click', '.button1', function (e) {
-    // Passes the answer that the user clicks on to function
-    game.clicked(e);
-})
+// $(document).on('click', '.button1', function (e) {
+//     // Passes the answer that the user clicks on to function
+//     game.clicked(e);
+// })
 
-$(document).on('click', '#reset', function () {
-    // Resets the game without reloading the page
-    $('#subcontainer').html("<h5 id='counter'> </h5>");
-    game.qIndex = 0;
-    game.correct = 0;
-    game.incorrect = 0;
-    game.counter = 15;
-    game.loadQ();
-})
+// $(document).on('click', '#reset', function () {
+//     // Resets the game without reloading the page
+//     $('#subcontainer').html("<h5 id='counter'> </h5>");
+//     game.qIndex = 0;
+//     game.correct = 0;
+//     game.incorrect = 0;
+//     game.counter = 15;
+//     game.loadQ();
+// })
 
 // OBJECT CONTAINING THE GAME FUNCTIONS //
 var game = {
@@ -166,31 +166,31 @@ var game = {
 
 // $("#test").on("click",() => {
 
-function getTweet(celebrity) {
-    event.preventDefault();
+// function getTweet(celebrity) {
+//     event.preventDefault();
 
-    var params = {
-        screen_name: celebrity,
-        count: 10
-    };
+//     var params = {
+//         screen_name: celebrity,
+//         count: 10
+//     };
 
-    client.get('statuses/user_timeline', params, function (error, tweets, response) {
-        if (!error) {
-            for (var i in tweets) {
-                // console.log(tweets[i].text);
-                if (tweets[i].favorite_count > 1000 && tweets[i].text.length > 100 && tweets[i].user.verified === true) {
-                    // console.log("True");
-                    console.log(tweets[i].text);
-                } else {
-                    console.log(`Favorites/tweets/verified issue`)
-                }
-                // console.log(tweets[i].favorite_count);
-            };
-        }
-    });
-}
+//     client.get('statuses/user_timeline', params, function (error, tweets, response) {
+//         if (!error) {
+//             for (var i in tweets) {
+//                 // console.log(tweets[i].text);
+//                 if (tweets[i].favorite_count > 1000 && tweets[i].text.length > 100 && tweets[i].user.verified === true) {
+//                     // console.log("True");
+//                     console.log(tweets[i].text);
+//                 } else {
+//                     console.log(`Favorites/tweets/verified issue`)
+//                 }
+//                 // console.log(tweets[i].favorite_count);
+//             };
+//         }
+//     });
+// }
 
-$("#submit").on("click", getTweet($("#celebrityInput").val()));
+// $("#submit").on("click", getTweet($("#celebrityInput").val()));
 
 // Make sure we're able to link tweet to tweeter
 // tweets[i].user.name
