@@ -7,13 +7,14 @@
     <title>Know Your Feed</title>
     <!-- CSS Reference -->
     <link rel='stylesheet' type='text/css' href="css/reset.css" />
-    <link rel='stylesheet' type='text/css' href="css/style.1.css" />   
+    <link rel='stylesheet' type='text/css' href="css/style.1.css" />
     <!-- Font Awesome and Google Font Reference-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"> 
-        <!-- Added link to the jQuery Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
+    <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
@@ -28,29 +29,54 @@
             Score better than 50% to keep playing.
         </p>
         <div id="subcontainer">
-                <button id="start" class="button2">START</button>
+            <button id="start" class="button2">START</button>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12" id="footer">
-            <p>For Amusement Only</p>  
+            <p>For Amusement Only</p>
         </div>
     </div>
 
-    <div>
+    <!-- <div>
         <button id= "test">TEST!</button>
-    </div>
+    </div> -->
 
+    <form>
+        Find a celebrity's tweet!: <input type="text" id="celebrityInput">
+        <button type="submit" id="submit">Submit</button>
+    </form>
 
-    <a class="twitter-timeline" data-width="3000" data-height="300" data-theme="light" data-link-color="#F5F8FA" href="https://twitter.com/feed_know?ref_src=twsrc%5Etfw">Tweets by feed_know</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script>
+        $('#start').on('click', function () {
+            // Removes the start button and instructions and loads the game
+            $('#start').remove();
+            $('#instruction').remove();
+            game.loadQ();
+        })
 
-    <a href="https://twitter.com/feed_know?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @feed_know</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        $(document).on('click', '.button1', function (e) {
+            // Passes the answer that the user clicks on to function
+            game.clicked(e);
+        })
 
-    <a href="https://twitter.com/intent/tweet?screen_name=feed_know&ref_src=twsrc%5Etfw" class="twitter-mention-button" data-show-count="false">Tweet to @feed_know</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        
-    <script src='./javascript/index.js'> </script>        
-        
+        $(document).on('click', '#reset', function () {
+            // Resets the game without reloading the page
+            $('#subcontainer').html("<h5 id='counter'> </h5>");
+            game.qIndex = 0;
+            game.correct = 0;
+            game.incorrect = 0;
+            game.counter = 15;
+            game.loadQ();
+        })
+
+        // $("#submit").on("click", getTweet($("#celebrityInput").val()));
+    </script>
+
+    <script src='./javascript/index.js'> </script>
+
 </body>
 <!-- new -->
+
 </html>

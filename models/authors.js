@@ -3,9 +3,9 @@ module.exports = function(sequelize, DataTypes){
         name: DataTypes.STRING
     });
     Authors.associate = function(models) {
-         Authors.hasMany(models.Tweets,{
-             onDelete: "cascade"
-         });
+        // Authors.hasMany(models.Port,{
+        //     onDelete: "cascade"
+        // });
     };
     return Authors;
 };
