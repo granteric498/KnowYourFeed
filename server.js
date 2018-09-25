@@ -14,10 +14,14 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 require("./routes/html")(app);
-require("./routes/author-api")(app);
-require("./routes/post-api")(app);
-db.sequelize.sync({ force: true }).then(function () {
-  app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-  });
+// require("./routes/author-api")(app);
+// require("./routes/post-api")(app);
+// db.sequelize.sync({ force: true }).then(function () {
+//   app.listen(PORT, function () {
+//     console.log("App listening on PORT " + PORT);
+//   });
+// });
+
+app.listen(PORT, function () {
+  console.log("App listening on PORT " + PORT);
 });
