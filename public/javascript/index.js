@@ -59,6 +59,7 @@ $('#start').on('click', function () {
     game.loadQ();
 })
 
+
 $(document).on('click', '.button1', function (e) {
     // Passes the answer that the user clicks on to function
     game.clicked(e);
@@ -123,6 +124,7 @@ var game = {
             game.wrongAns();
         }
     },
+
     rightAns: function () {
         // console.log("right");
         clearInterval(timer);
@@ -166,6 +168,7 @@ var game = {
 
 // $("#test").on("click",() => {
 
+
 // function getTweet(celebrity) {
 //     event.preventDefault();
 
@@ -199,3 +202,4 @@ var game = {
 // run for loop that will that will run get tweet function 
 
 // firebase for scoring
+
