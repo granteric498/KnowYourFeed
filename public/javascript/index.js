@@ -1,7 +1,7 @@
 var api_avatars = [{
     avatars: ["https://avatars.io/twitter/justinbieber/medium", "https://avatars.io/twitter/VancityReynolds/medium",
-    "https://avatars.io/twitter/mindykaling/medium", "https://avatars.io/twitter/kanyewest/medium", "https://avatars.io/twitter/donaldtrump/medium",
-    "https://avatars.io/twitter/JCrossover/medium", "https://avatars.io/twitter/kobebryant/medium", "https://avatars.io/twitter/steviesovak/medium"],
+        "https://avatars.io/twitter/mindykaling/medium", "https://avatars.io/twitter/kanyewest/medium", "https://avatars.io/twitter/donaldtrump/medium",
+        "https://avatars.io/twitter/JCrossover/medium", "https://avatars.io/twitter/kobebryant/medium", "https://avatars.io/twitter/steviesovak/medium"],
     avname: ["Justin Bieber", "Ryan Reynolds", "Mindy Kaling", "Kanye West", "Dhruv", "Chum", "Grant", "Steven"]
 },
 ];
@@ -75,114 +75,83 @@ var tweetArr = [{
 
 // MAIN PROCESS CLICK EVENTS //
 
-$('#start').on('click',function(){
+$('#start').on('click', function () {
     // Removes the start button and instructions and loads the game
     $('#start').remove();
     $('#instruction').remove();
     game.loadQ();
 })
 
-$(document).on('click','.button1',function(e){
+$(document).on('click', '.button1', function (e) {
     // Passes the answer that the user clicks on to function
     game.clicked(e);
 })
 
-$(document).on('click','#reset',function(){
+$(document).on('click', '#reset', function () {
     // Resets the game without reloading the page
-    $('#subcontainer').html("<h5 id='counter'> </h5>");
-    game.qIndex=0;
-    game.correct=0;
-    game.incorrect=0;
-    game.counter=15;
+    game.qIndex = 0;
+    game.correct = 0;
+    game.incorrect = 0;
     game.loadQ();
 })
 
 // OBJECT CONTAINING THE GAME FUNCTIONS //
 var game = {
     qIndex: 0,
-    counter: 15,
     correct: 0,
     incorrect: 0,
-    countdown: function(){
-        // game.counter;
-        // $('#counter').html(game.counter);
-        if (game.counter<=0){
-            // console.log('Time Up!');
-            // game.timesUp();
-        }
-    },
-    loadQ: function(){
-        timer = setInterval(game.countdown,1000);
-        $('#subcontainer').html("<h5 id='counter'> </h5>");
-        $('#subcontainer').append("<h2>"+tweetArr[game.qIndex].twText+"</h2>");
-        for(var i=0;i<tweetArr.length;i++){
-            $('#subcontainer').append('<button class="button1" id="button-'+ i + '" data-name="'+tweetArr[i].authorID+'">'+'<img src='+tweetArr[i].twImage+'>'+tweetArr[i].authorID+'</button>'+'\n');
+    loadQ: function () {
+        $('#subcontainer').append("<h2>" + tweetArr[game.qIndex].twText + "</h2>");
+        for (var i = 0; i < tweetArr.length; i++) {
+            $('#subcontainer').append('<button class="button1" id="button-' + i + '" data-name="' 
+            + tweetArr[game.qIndex].choices[i] + '" height=50 width=50>' + '<img src=' 
+            + tweetArr[game.qIndex].answers[i] + '>' + tweetArr[game.qIndex].choices[i] 
+            + '</button>' + '\n');
 
         }
     },
-    nextQ: function(){
-        // game.counter = 15;
-        // $('#counter').html(game.counter);
+    nextQ: function () {
         game.qIndex++;
         game.loadQ();
     },
-
-    timesUp: function(){
-        // clearInterval(timer);
-        game.incorrect++;
-        $('#subcontainer').html('<h2> OUT OF TIME! </h2>');
-        if (game.qIndex==questionArr.length-1){
-            setTimeout(game.results,1*1000);
-        } else {
-            setTimeout(game.nextQ,3*1000);
-        }
-    },
-
-    clicked: function(e){
-        clearInterval(timer);
-        if($(e.target).data("name")==tweetArr[game.qIndex].authorID){
+    clicked: function (e) {
+        if ($(e.target).data("name") == tweetArr[game.qIndex].authorID) {
             game.rightAns();
         } else {
             game.wrongAns();
         }
     },
-    rightAns: function(){
+    rightAns: function () {
         // console.log("right");
-        clearInterval(timer);
         game.correct++;
         $('#subcontainer').html('<h2> CORRECT!</h2>');
         // $('#subcontainer').append("<img src = "+questionArr[game.qIndex].image+"><p><a href='https://giphy.com/gifs/adultswim-3o7TKVH7nbfCVgzaBq'>via GIPHY</a></p>");
-        if (game.qIndex==tweetArr.length-1){
-            setTimeout(game.results,1*1000);
+        if (game.qIndex == tweetArr.length - 1) {
+            setTimeout(game.results, 1 * 1000);
         } else {
-            setTimeout(game.nextQ, 1*1000);
+            setTimeout(game.nextQ, 1 * 1000);
         }
     },
-    wrongAns: function(){
+    wrongAns: function () {
         // console.log("wrong");
-        clearInterval(timer);
         game.incorrect++;
         $('#subcontainer').html('<h2> WRONG ANSWER!</h2>');
-        // $('#subcontainer').append('<div style="width:50%;height:0;padding-bottom:30%;position:relative;"><iframe src="https://giphy.com/embed/Lfa0tFqDoHzd6" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/rick-and-morty-sanchez-smith-Lfa0tFqDoHzd6">via GIPHY</a></p>');
-        if (game.qIndex==tweetArr.length-1){
-            setTimeout(game.results,1*1000);
+        if (game.qIndex == tweetArr.length - 1) {
+            setTimeout(game.results, 1 * 1000);
         } else {
-            setTimeout(game.nextQ,1*1000);
+            setTimeout(game.nextQ, 1 * 1000);
         }
     },
-    results: function(){
-        clearInterval(timer);
+    results: function () {
         $('#subcontainer').html('<h3> Game Completed! </h3>');
-        $('#subcontainer').append('<h3>Correct Answers: '+game.correct+' Wrong Answers: '+game.incorrect+' </h3><br>');
-        if (game.correct>game.incorrect) {
+        $('#subcontainer').append('<h3>Correct Answers: ' + game.correct + ' Wrong Answers: ' + game.incorrect + ' </h3><br>');
+        if (game.correct > game.incorrect) {
             $('#subcontainer').append('<h3>WINNER!!! </h3>');
-            $('#subcontainer').append("<button class='button1' id='reset'>RESTART</button>");
+            $('#subcontainer').append("<button class='button2' id='reset'>RESTART</button>");
             $('#subcontainer').append("<div style='width:50%;height:0;padding-bottom:25%;position:relative;'><iframe src='https://giphy.com/embed/3o7TKVH7nbfCVgzaBq' width='100%' height='100%' style='position:absolute' frameBorder='0' class='giphy-embed' allowFullScreen></iframe></div><p><a href='https://giphy.com/gifs/adultswim-3o7TKVH7nbfCVgzaBq'>via GIPHY</a></p>");
         } else {
             $('#subcontainer').append('<h3>YOU LOSE... </h3><br><h4>Try Again.</h4>');
             $('#subcontainer').append("<button class='button2' id='reset'>RESTART</button>");
-            // $('#subcontainer').append("<div style='width:50%;height:0;padding-bottom:25%;position:relative;'><iframe src='https://giphy.com/embed/3o7TKVH7nbfCVgzaBq' width='100%' height='100%' style='position:absolute' frameBorder='0' class='giphy-embed' allowFullScreen></iframe></div><p><a href='https://giphy.com/gifs/adultswim-3o7TKVH7nbfCVgzaBq'>via GIPHY</a></p>");
         }
-        // $('#subcontainer').append("<button class='button1' id='reset'>RESTART</button>");
     }
 }
