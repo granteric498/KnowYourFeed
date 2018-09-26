@@ -15,6 +15,38 @@
     
 }
 
+.tweet {
+	border-bottom:1px solid #999;
+	padding:10px;
+	position:relative;
+	min-height:50px;
+    box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    min-width: 400px;
+    max-width: 640px;
+    margin: auto;    
+}
+.tweet .avatar {
+	float:left;
+	margin-right:10px;
+}
+.tweet .content {
+    text-align: left;
+    font: 'Roboto', sans-serif;
+	font-size:16px;
+    margin-right:20px;
+    color: black;
+}
+.tweet .time {
+	position:absolute;
+	right:0;
+	top:0;
+	margin:10px 10px 0 0;
+	font-style:normal;
+	font-size:11px;
+	color:#aaa;
+}
+
 html {
     font-size: 18px;
     background-color: #E1E8ED;
@@ -92,8 +124,8 @@ p {
 }
 
 .button1{
-    background-color: rgba(101, 119, 134);
-    padding: .5em;
+    background-color:#AAB8C2;
+    padding: .3em;
     font-family: 'Cute Font', cursive;
     font-size:1.5em;
     position:relative;
@@ -189,6 +221,37 @@ p {
         height: 100px;
         width: 100px;
     } */
+
+    .tweet {
+        border-bottom:1px solid #999;
+        padding:10px;
+        position:relative;
+        min-height:50px;
+        box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        min-width: 85%;
+        margin: auto;    
+    }
+    .tweet .avatar {
+        float:left;
+        margin-right:10px;
+    }
+    .tweet .content {
+        text-align: left;
+        font: 'Roboto', sans-serif;
+        font-size:12px;
+        margin-right:20px;
+        color: black;
+    }
+    .tweet .time {
+        position:absolute;
+        right:0;
+        top:0;
+        margin:10px 10px 0 0;
+        font-style:normal;
+        font-size:11px;
+        color:#aaa;
+    }
 }
 
 
@@ -222,6 +285,37 @@ p {
         height: 100px;
         width: 100px;
     } */
+
+    .tweet {
+        border-bottom:1px solid #999;
+        padding:10px;
+        position:relative;
+        min-height:50px;
+        box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        min-width: 85%;
+        margin: auto;    
+    }
+    .tweet .avatar {
+        float:left;
+        margin-right:10px;
+    }
+    .tweet .content {
+        text-align: left;
+        font: 'Roboto', sans-serif;
+        font-size:12px;
+        margin-right:20px;
+        color: black;
+    }
+    .tweet .time {
+        position:absolute;
+        right:0;
+        top:0;
+        margin:10px 10px 0 0;
+        font-style:normal;
+        font-size:11px;
+        color:#aaa;
+    }
 }
 
 
@@ -255,7 +349,39 @@ p {
         height: 100px;
         width: 100px;
     } */
+
+    .tweet {
+        border-bottom:1px solid #999;
+        padding:10px;
+        position:relative;
+        min-height:50px;
+        box-shadow:0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        min-width: 85%;
+        margin: auto;    
+    }
+    .tweet .avatar {
+        float:left;
+        margin-right:10px;
+    }
+    .tweet .content {
+        text-align: left;
+        font: 'Roboto', sans-serif;
+        font-size:12px;
+        margin-right:20px;
+        color: black;
+    }
+    .tweet .time {
+        position:absolute;
+        right:0;
+        top:0;
+        margin:10px 10px 0 0;
+        font-style:normal;
+        font-size:11px;
+        color:#aaa;
+    }
 }
+
 #game-title {
     /* line-height: 0.95em;
     letter-spacing: -0.125em; */
@@ -349,8 +475,8 @@ p {
 }
 
 .button1{
-    background-color: rgba(101, 119, 134);
-    padding: 1.5em;
+    background-color: #AAB8C2;
+    padding: .3em;
     font-family: 'Cute Font', cursive;
     font-size:1.5em;
     position:relative;

@@ -102,7 +102,9 @@ var game = {
     correct: 0,
     incorrect: 0,
     loadQ: function () {
-        $('#subcontainer').html("<h2>" + tweetArr[game.qIndex].twText + "</h2>");
+        $('#subcontainer').html("<div class='tweet'>"+"<img src='https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png' class='avatar'>"+
+        "<div class='content'>"+tweetArr[game.qIndex].twText+
+        "</div>"+"<i class='time'>17m</i>"+"</div>");
         for (var i = 0; i < tweetArr.length; i++) {
             $('#subcontainer').append('<button class="button1" id="button-' + i + '" data-name="'
                 + tweetArr[game.qIndex].choices[i] + '">' + '<img src='
