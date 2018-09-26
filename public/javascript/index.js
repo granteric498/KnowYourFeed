@@ -163,39 +163,3 @@ var game = {
         // $('#subcontainer').append("<button class='button1' id='reset'>RESTART</button>");
     }
 }
-
-// $("#test").on("click",() => {
-
-// function getTweet(celebrity) {
-//     event.preventDefault();
-
-//     var params = {
-//         screen_name: celebrity,
-//         count: 10
-//     };
-
-//     client.get('statuses/user_timeline', params, function (error, tweets, response) {
-//         if (!error) {
-//             for (var i in tweets) {
-//                 // console.log(tweets[i].text);
-//                 if (tweets[i].favorite_count > 1000 && tweets[i].text.length > 100 && tweets[i].user.verified === true) {
-//                     // console.log("True");
-//                     console.log(tweets[i].text);
-//                 } else {
-//                     console.log(`Favorites/tweets/verified issue`)
-//                 }
-//                 // console.log(tweets[i].favorite_count);
-//             };
-//         }
-//     });
-// }
-
-// $("#submit").on("click", getTweet($("#celebrityInput").val()));
-
-// Make sure we're able to link tweet to tweeter
-// tweets[i].user.name
-
-// pull database, push celebs into array 
-// run for loop that will that will run get tweet function 
-
-// firebase for scoring
