@@ -139,7 +139,7 @@ var game = {
         // console.log("Wrong");
         game.incorrect++;
         $('#subcontainer').html('<h2> WRONG ANSWER! </h2>');
-        if (game.currentTweet == tweetArr.length - 1) {
+        if (game.qIndex == tweetArr.length - 1) {
             setTimeout(game.results, 1 * 1000);
         } else {
             setTimeout(game.nextQ, 1 * 1000);
