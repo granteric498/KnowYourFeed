@@ -1,73 +1,73 @@
 var api_avatars = [{
-    avatars: ["https://avatars.io/twitter/justinbieber/medium", "https://avatars.io/twitter/VancityReynolds/medium",
-        "https://avatars.io/twitter/mindykaling/medium", "https://avatars.io/twitter/kanyewest/medium", "https://avatars.io/twitter/donaldtrump/medium",
-        "https://avatars.io/twitter/JCrossover/medium", "https://avatars.io/twitter/kobebryant/medium", "https://avatars.io/twitter/steviesovak/medium"],
-    avname: ["Justin Bieber", "Ryan Reynolds", "Mindy Kaling", "Kanye West", "Dhruv", "Chum", "Grant", "Steven"]
+    avatars: ["https://avatars.io/twitter/EyeOfJackieChan/medium", "https://avatars.io/twitter/aplusk/medium",
+        "https://avatars.io/twitter/lindsaylohan/medium", "https://avatars.io/twitter/Cristiano/medium", "https://avatars.io/twitter/KingJames/medium",
+        "https://avatars.io/twitter/neymarjr/medium", "https://avatars.io/twitter/kobebryant/medium", "https://avatars.io/twitter/Ellen_Authentic/medium"],
+    avname: ["Jackie Chan", "Ashton Kutcher", "Lindsay Lohan", "Cristiano Ronaldo", "LeBron James", "Neymar Jr", "Kobe Bryant", "Ellen DeGeneres"]
 },
 ];
 
 var tweetArr = [{
     twID: 1,
     twTopic: "random",
-    twText: "I'd walk through a fire for my daughter...",
-    twImage: "https://avatars.io/twitter/VancityReynolds/medium",
-    authorID: "Ryan Reynolds",
+    twText: "April 22 is Earth Day. With the combined strength from you, me, and everyone on the planet, we can make a difference in helping save the world. Lets all be Green Heroes!",
+    twImage: "https://avatars.io/twitter/EyeOfJackieChan/medium",
+    authorID: "Jackie Chan",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }, {
     twID: 2,
     twTopic: "random",
-    twText: "Why is rhode island nor a road...",
-    twImage: "https://avatars.io/twitter/justinbieber/medium",
-    authorID: "Justin Bieber",
+    twText: "Every American needs to do a gut check right now, today.  Who are you? Who are we? What do we stand for? What do we stand against?  Who represents us?",
+    twImage: "https://avatars.io/twitter/aplusk/medium",
+    authorID: "Ashton Kutcher",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }, {
     twID: 3,
     twTopic: "random",
-    twText: "My head is too heavy",
-    twImage: "https://avatars.io/twitter/mindykaling/medium",
-    authorID: "Mindy Kaling",
+    twText: "I can post from twitter only ATM because someone hacked my Instagram page. But this was a great time @Tyga",
+    twImage: "https://avatars.io/twitter/lindsaylohan/medium",
+    authorID: "Lindsay Lohan",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }, {
     twID: 4,
     twTopic: "random",
-    twText: "BILL COSBY INNOCENT",
-    twImage: "https://avatars.io/twitter/kanyewest/medium",
-    authorID: "Kanye West",
+    twText: "Challenge the rules by making your own. #nikesportswear #nikesportpack @nikesportswear",
+    twImage: "https://avatars.io/twitter/Cristiano/medium",
+    authorID: "Cristiano Ronaldo",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }, {
     twID: 5,
     twTopic: "random",
-    twText: "Lorem Dipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
-    twImage: "https://avatars.io/twitter/donaldtrump/medium",
-    authorID: "Dhruv",
+    twText: "Get it to Juice man!! Some way somehow! He’s a monster",
+    twImage: "https://avatars.io/twitter/KingJames/medium",
+    authorID: "LeBron James",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }, {
     twID: 6,
     twTopic: "random",
-    twText: "Lorem Cipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
-    twImage: "https://avatars.io/twitter/JCrossover/medium",
-    authorID: "Chum",
+    twText: "Nice to meet you .. I'm a big fan !! @KevinHart4real",
+    twImage: "https://avatars.io/twitter/neymarjr/medium",
+    authorID: "Neymar Jr",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }, {
     twID: 7,
     twTopic: "random",
-    twText: "Lorem Gipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
+    twText: "WE had to face the Spurs EVERY post season pretty much. Not to mention the first super team in Boston but hey, what do I know",
     twImage: "https://avatars.io/twitter/kobebryant/medium",
-    authorID: "Grant",
+    authorID: "Kobe Bryant",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }, {
     twID: 8,
     twTopic: "random",
-    twText: "Lorem Sipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore",
-    twImage: "https://avatars.io/twitter/steviesovak/medium",
-    authorID: "Steven",
+    twText: "Every time I've met Ed Sheeran, the flowers have always changed. But he hasn't.",
+    twImage: "https://avatars.io/twitter/Ellen_Authentic/medium",
+    authorID: "Ellen DeGeneres",
     answers: api_avatars[0].avatars,
     choices: api_avatars[0].avname
 }];
