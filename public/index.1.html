@@ -6,32 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Know Your Feed</title>
     <!-- CSS Reference -->
-    <link rel='stylesheet' type='text/css' href="css/reset.css" />
-    <link rel='stylesheet' type='text/css' href="css/style.1.css" />
+    <link rel='stylesheet' type='text/css' href="./css/reset.css" />
+    <link rel='stylesheet' type='text/css' href="./css/style.1.css" />   
     <!-- Font Awesome and Google Font Reference-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet">
-    <!-- Added link to the jQuery Library -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font" rel="stylesheet"> 
+        <!-- Added link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-        <div class="container2" id="game-title"></div>
-        <div class="container">
-            <span class="logo1" id="center"><img src="./images/KYF_logo.png"></span>
-            <span class="text2">Match the celebrity with their tweet!</span>
-            <div id="subcontainer">
-                <span>
-                    <button id="start" class="button2">START</button>
-                </span>
-            </div>
+    <div id="container" class="boxSet topBox">
+        <div id="game-title" class="boxSet topBox">
+            <!-- <h1>Celebrity Twitter Match Game</h1> -->
+            <img src="./images/KYF_logo v1.3.png">
         </div>
-
-    <script src='./javascript/index.js'> </script>
-
+        <p id="instruction" class="boxSet topBox">
+            Match the tweet with the celebrity</br>
+            Score better than 50% to keep playing.
+        </p>
+        <div id="subcontainer">
+                <button id="start" class="button2">START</button>
+        </div>
+    </div>
+        
+    <script src='./javascript/index.js'> </script>        
+        
 </body>
-
 </html>
