@@ -37,7 +37,7 @@ body{
     font-family: "Cute Font", cursive;
 }
 
-@keyframes text {
+/* @keyframes text {
     0%{
         color: #1DA1F2;
         margin-bottom: -40px;
@@ -50,7 +50,7 @@ body{
         letter-spacing: 8px;
         margin-bottom: -40px;
     }
-}
+} */
 
 .container2 {
     display: flex;
@@ -65,8 +65,9 @@ body{
     font-size: 15px;
     /* width: 75%; */
     /* font-family: 'Cute Font', cursive; */
+    top: 50%;
     color: white;
-    background-color:  rgba(29, 161, 242);
+    background-color: #657786;
     padding:.25em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -78,7 +79,7 @@ h1 {
 
 h2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2em;
+    font-size: 2.3em;
 }
 
 h3 {

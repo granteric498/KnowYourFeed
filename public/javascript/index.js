@@ -85,7 +85,7 @@ var tweetArr = [{
 
 $('#start').on('click', function () {
     // Removes the start button and center logo, loads the game
-    document.getElementById("game-title").innerHTML = "<img src='./images/KYF_logo_modified.png'>";
+    document.getElementById("game-title").innerHTML = "<img src='./images/KYF_logo_modified.png' height='167' width='225'>";
     document.querySelector(".logo1").innerHTML = " ";
     document.querySelector(".text2").innerHTML = " ";
     document.getElementById("subcontainer").innerHTML = " ";
@@ -109,7 +109,7 @@ var game = {
     incorrect: 0,
     // Methods
     loadTweet: function () {
-        $("#subcontainer").html("<blockquote class = 'twitter.tweet'>" + tweetArr[game.currentTweet].twText + "</blockquote>");
+        $("#subcontainer").html("<h2>" + tweetArr[game.currentTweet].twText + "</h2>");
         for (var i = 0; i < tweetArr[game.currentTweet].answers.length; i++) {
             // Add a randomizer here for avatars
             // Sets the data-name attribute as the correct author of the tweet
