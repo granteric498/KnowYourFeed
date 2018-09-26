@@ -60,6 +60,7 @@ $('#start').on('click', function () {
     game.loadQ();
 })
 
+
 $(document).on('click', '.button1', function (e) {
     // Passes the answer that the user clicks on to function
     game.clicked(e);
@@ -124,6 +125,7 @@ var game = {
             game.wrongAns();
         }
     },
+
     rightAns: function () {
         // console.log("right");
         clearInterval(timer);
